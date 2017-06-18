@@ -18,10 +18,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/strains', (req, res) => {
-				console.log('it works??');
     res.json({
-        strains
+        text: strains
     })
+});
+
+app.get('/strains/:id', function(req, res){
+				res.json({
+								text: strains[req.params.id]});
 });
 
 // catch 404 and forward to error handler
