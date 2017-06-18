@@ -58,4 +58,4 @@ module.exports  = [{
 				genetics: 'Afghani indica, Mendocino Purps, Skunk #1',
 				climate: 'moderately warm climate, sheltered, lots of sunlight',
 				url: 'https://d3ix816x6wuc0d.cloudfront.net/cdn/strain-photo/677259/b/grape-ape__primary_bd6e.jpg'
-}]
+}];

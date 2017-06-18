@@ -2,33 +2,41 @@ const express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    strains = require('./routes/strains');
+    port = process.env.PORT || 3000;
 
-const app = express();
+
+const app = express(),
+    strains = require('./strains');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/strains', strains);
+app.get('./strains', (req, res) => {
+    res.json({
+        text: strains
+    });
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+      message: err.message,
+      error: req.app.get('env') === 'development' ? err : {}
+  });
 });
+
+app.listen(port, () =>{
+    console.log(`running on port ${port}`);
+})
 
 module.exports = app;
