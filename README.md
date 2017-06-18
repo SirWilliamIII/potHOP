@@ -3,15 +3,15 @@ crud app describing relations between dispensaries, strains and customers
 
 ##  Server Checklist
 
-  - [  ] Initialize npm project 
+  - [ x ] Initialize npm project
     - Create server directory
     - Generate Express App
     - Initialize Git reository
-  - [  ] Create database
-  - [  ] Initialize Knex project
+  - [ x ] Create database
+  - [ x ] Initialize Knex project
     - Install knex and pg
     - Create knexfile.js
-  - [  ]  Create strains table migration
+  - [ x ]  Create strains table migration
   - [  ]  Seed strains table with sample data
   - [  ]  Convert Express App to JSON API
     - Remove View Rendering

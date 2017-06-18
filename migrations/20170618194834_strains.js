@@ -6,7 +6,6 @@ exports.up = function(knex, Promise) {
         table.text('genetics');
         table.text('climate');
         table.text('url');
-
     })
 };
 
