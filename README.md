@@ -12,7 +12,7 @@ crud app describing relations between dispensaries, strains and customers
     - Install knex and pg
     - Create knexfile.js
   - [ x ]  Create strains table migration
-  - [  ]  Seed strains table with sample data
+  - [ x ]  Seed strains table with sample data
   - [  ]  Convert Express App to JSON API
     - Remove View Rendering
     - Remove Static Serve
