@@ -2,12 +2,12 @@
   "name": "potHop",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "dev": "nodemon",
     "test": "(dropdb --if-exists test-denver-pot && createdb test-denver-pot) NODE_ENV=TEST mocha"
   },
   "keywords": [],
-  "author": "",
+  "author": "Will Carpenter",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
