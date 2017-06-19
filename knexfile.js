@@ -1,8 +1,10 @@
-// Update with your config settings.
-
 module.exports = {
-  development: {
-    client: 'pg',
-    connection: 'postgres://localhost/denver-pot'
-  }
+				development: {
+								client: 'pg',
+								connection: 'postgres://localhost/denver-pot'
+  },
+				test: {
+								client: 'pg',
+								connection: 'postgres://localhost/test-denver-pot'
+				}
 };

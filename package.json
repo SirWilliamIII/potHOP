@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "nodemon app.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "test": "(dropdb --if-exists test-denver-pot && createdb test-denver-pot) NODE_ENV=TEST mocha"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,9 @@
     "pg": "^4.5.5"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0"
   }
 }
