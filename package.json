@@ -1,10 +1,9 @@
 {
   "name": "potHop",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,9 @@
     "gitignore": "^0.6.0",
     "knex": "^0.13.0",
     "morgan": "^1.8.2",
-    "nodemon": "^1.11.0",
     "pg": "^4.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

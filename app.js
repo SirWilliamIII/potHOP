@@ -6,27 +6,16 @@ const express = require('express'),
 
 
 const app = express(),
-    strains = require('./strains');
+    strains = require('./api/strains');
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.get('/', (req, res) => {
-				res.send('This is the index page.')
-});
 
-app.get('/strains', (req, res) => {
-    res.json({
-        text: strains
-    })
-});
-
-app.get('/strains/:id', function(req, res){
-				res.json({
-								text: strains[req.params.id]});
-});
+app.use('/api/v1/strains', strains);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
