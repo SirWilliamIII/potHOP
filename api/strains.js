@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-				res.json({message: 'This is the index page.'})
+	res.json({message: 'This is the index page.'})
 });
 //
 // router.get('/strains', (req, res) => {
